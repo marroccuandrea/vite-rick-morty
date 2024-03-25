@@ -15,6 +15,9 @@ export default {
   <div class="text-center my-5">
     <h1>{{ store.mainTitle }}</h1>
   </div>
+  <div class="container row my-4">
+    
+  </div>
 </template>
 
 
