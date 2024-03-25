@@ -1,6 +1,11 @@
 <script>
 export default {
-
+    props:{
+        name: String,
+        status: String,
+        species: String,
+        image: String
+    }
 }
 </script>
 <template>

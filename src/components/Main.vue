@@ -18,7 +18,7 @@ export default {
   <div class="text-center my-5 container">
     <!-- <input class="form-control" type="text" v-model="store.mainTitle"> -->
     <div class="row row-cols-4">
-      <Card v-for="card in this.store.cardsList" :key="card.id" />
+      <Card class="mb-5" v-for="card in this.store.cardsList" :key="card.id" :name="card.name" :status="card.status" :species="card.species" :image="card.image"/>
 
     </div>
 
