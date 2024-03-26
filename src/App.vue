@@ -43,7 +43,7 @@ export default {
 </script>
 
 <template>
-  <Header />
+  <Header @startSearch="getApi" />
   <Main />
 </template>
 

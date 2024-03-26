@@ -3,7 +3,17 @@ import { store } from '../data/store'
 export default {
   data() {
     return {
-      store
+      store,
+      nameSearch: ''
+    }
+  },
+  methods: {
+    startSearch() {
+      console.log('ricerca');
+      this.store.queryParams = {
+        name: this.nameSearch
+      }
+      this.$emit('startSearch')
     }
   }
 
@@ -18,7 +28,8 @@ export default {
   <div class="container d-flex justify-content-center">
     <div class="row">
       <div class="col-8">
-        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ricerca per nome">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ricerca per nome"
+          v-model.trim="nameSearch" @keyup.enter="startSearch">
         <datalist id="datalistOptions">
           <!-- Ottengo la preview dei nomi nella searchbar da utilizzare per l'autocomplete -->
           <option v-for="(name, index) in this.store.nameList" :key="index" :value="name">

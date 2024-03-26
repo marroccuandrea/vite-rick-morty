@@ -8,6 +8,6 @@ export const store = reactive({
   cardsList: [],
   nameList: [],
   queryParams: {
-    name: '',
+
   }
 })
