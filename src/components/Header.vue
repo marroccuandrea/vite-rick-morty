@@ -27,7 +27,7 @@ export default {
   </div>
   <div class="container d-flex justify-content-center">
     <div class="row">
-      <div class="col-8">
+      <div class="col">
         <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ricerca per nome"
           v-model.trim="nameSearch" @keyup.enter="startSearch">
         <datalist id="datalistOptions">
@@ -49,9 +49,7 @@ export default {
           </ul>
         </div>
       </div> -->
-      <div class=" col-4">
-        <button class="btn btn-primary">Search</button>
-      </div>
+
     </div>
   </div>
 </template>
