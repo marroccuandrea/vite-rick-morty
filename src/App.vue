@@ -16,11 +16,7 @@ export default {
   methods: {
     getApi() {
       axios.get(this.store.apiUrl, {
-        params: {
-          num: 20,
-          offset: 0,
-          language: 'en'
-        }
+        params: store.queryParams
       })
         .then(result => {
           this.store.cardsList = result.data.results
@@ -29,10 +25,19 @@ export default {
         .catch(error => {
           console.log(error);
         })
+    },
+    getName() {
+      axios.get(this.store.nameUrl)
+        // Qui mappo l'array e ottengo solo i nomi
+        .then(result => {
+          this.store.nameList = result.data.results.map(item => item.name);
+          console.log(this.store.nameList);
+        })
     }
   },
   mounted() {
-    this.getApi()
+    this.getApi(),
+      this.getName()
   }
 }
 </script>

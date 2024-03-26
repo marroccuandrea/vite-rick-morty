@@ -17,12 +17,18 @@ export default {
   </div>
   <div class="container d-flex justify-content-center">
     <div class="row">
-      <div class="col-4">
-        <input class="form-control" type="text">
+      <div class="col-8">
+        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ricerca per nome">
+        <datalist id="datalistOptions">
+          <!-- Ottengo la preview dei nomi nella searchbar da utilizzare per l'autocomplete -->
+          <option v-for="(name, index) in this.store.nameList" :key="index" :value="name">
+          </option>
+        </datalist>
       </div>
-      <div class="col-4">
+      <!-- <div class="col-4">
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             Select Status
           </button>
           <ul class="dropdown-menu">
@@ -31,12 +37,9 @@ export default {
             <li><a class="dropdown-item" href="#">Species</a></li>
           </ul>
         </div>
-      </div>
-      <div class="col-2">
+      </div> -->
+      <div class=" col-4">
         <button class="btn btn-primary">Search</button>
-      </div>
-      <div class="col-2">
-        <button class="btn btn-warning">Reset</button>
       </div>
     </div>
   </div>
