@@ -57,7 +57,7 @@ export default {
       </div>
       <div class="col-3">
         <div class="col">
-          <select v-model="speciesSearch" @change="startSearch" class="form-select btn btn-danger">
+          <select v-model="speciesSearch" @change="startSearch" class="form-select">
             <option value="" disabled selected>Species</option>
             <option value="Human">Human</option>
             <option value="Alien">Alien</option>
