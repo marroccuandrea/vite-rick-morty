@@ -43,7 +43,7 @@ export default {
       <!-- Select menu status -->
       <div class="col">
         <select v-model="statusSearch" @change="startSearch" class="form-select">
-          <option selected>Select Status</option>
+          <option value="" disabled selected>Select Status</option>
           <option value="Alive">Alive</option>
           <option value="Dead">Dead</option>
           <option value="Unknown">Unknown</option>
@@ -52,7 +52,7 @@ export default {
       <div class="col">
         <div class="col">
           <select v-model="speciesSearch" @change="startSearch" class="form-select">
-            <option selected>Select Species</option>
+            <option value="" disabled selected>Select Species</option>
             <option value="Human">Human</option>
             <option value="Alien">Alien</option>
             <option value="Robot">Robot</option>
