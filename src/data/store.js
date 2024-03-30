@@ -11,6 +11,8 @@ export const store = reactive({
   nameList: [],
   statusList: [],
   speciesList: [],
+  status: '',
+  species: '',
   queryParams: {
 
   }

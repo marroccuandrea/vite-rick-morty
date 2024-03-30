@@ -34,28 +34,11 @@ export default {
           console.log(this.store.nameList);
         })
     },
-    getStatus() {
-      axios.get(this.store.statusUrl)
-        // Qui mappo l'array e ottengo solo gli status
-        .then(result => {
-          this.store.statusList = result.data.results.map(item => item.status);
-          console.log(this.store.statusList);
-        })
-    },
-    getSpecies() {
-      axios.get(this.store.speciesUrl)
-        // Qui mappo l'array e ottengo solo le species
-        .then(result => {
-          this.store.speciesList = result.data.results.map(item => item.species);
-          console.log(this.store.speciesList);
-        })
-    }
+
   },
   mounted() {
     this.getApi(),
-      this.getName(),
-      this.getSpecies(),
-      this.getStatus()
+      this.getName()
   }
 }
 </script>
