@@ -27,7 +27,8 @@ export default {
   </div>
   <div class="container d-flex justify-content-center">
     <div class="row">
-      <div class="col">
+      <div class="col-8">
+        <!-- Input searchbar -->
         <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Ricerca per nome"
           v-model.trim="nameSearch" @keyup.enter="startSearch">
         <datalist id="datalistOptions">
@@ -36,19 +37,20 @@ export default {
           </option>
         </datalist>
       </div>
-      <!-- <div class="col-4">
+      <!-- Dropdown menu status -->
+      <div class="col-4">
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Select Status
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Name</a></li>
-            <li><a class="dropdown-item" href="#">Status</a></li>
-            <li><a class="dropdown-item" href="#">Species</a></li>
+            <li><a class="dropdown-item" href="#">Alive</a></li>
+            <li><a class="dropdown-item" href="#">Dead</a></li>
+            <li><a class="dropdown-item" href="#">Unknown</a></li>
           </ul>
         </div>
-      </div> -->
+      </div>
 
     </div>
   </div>
